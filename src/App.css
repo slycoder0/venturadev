@@ -1,4 +1,5 @@
 #root {
+  scroll-behavior: smooth;
   width: 80vw;
   max-width: 1280px;
   margin: 0 auto;
@@ -12,7 +13,7 @@
 }
 
 body {
-  width: 100vw;
+  width: 100%;
   margin: 0;
   padding: 0;
   display: flex;

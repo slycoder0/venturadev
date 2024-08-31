@@ -21,12 +21,12 @@ export default function Home() {
           Server | Git
         </p>
         <div className='links'>
-          <button className='github'>
-            <BsGithub />
-            <a href='https://github.com/slycoder0' target='_blank'>
+          <a href='https://github.com/slycoder0' target='_blank'>
+            <button className='github'>
+              <BsGithub />
               Github
-            </a>
-          </button>
+            </button>
+          </a>
           <a
             href='https://www.linkedin.com/in/gabriel-ventura-13028b208/'
             target='_blank'
@@ -36,34 +36,34 @@ export default function Home() {
               Linkedin
             </button>
           </a>
-          <button className='instagram'>
-            <BsInstagram />
-            <a href='' target='_blank'>
+          <a href='#' target='_blank'>
+            <button className='instagram'>
+              <BsInstagram />
               Instagram
-            </a>
-          </button>
-          <button className='email'>
-            <SiGmail />
-            <a href='' target='_blank'>
+            </button>
+          </a>
+          <a href='' target='_blank'>
+            <button className='email'>
+              <SiGmail />
               Email
-            </a>
-          </button>
+            </button>
+          </a>
+
           <button onClick={handleClick} className='btnwhois'>
-            Who is?
+            Clique Aqui
           </button>
+          {showInfo && (
+            <div className='info' style={{ opacity: showInfo ? 1 : 0 }}>
+              <h2>Sobre Gabriel Ventura</h2>
+              <p>
+                Olá, eu sou o Gabriel Ventura, um Desenvolvedor Full Stack
+                apaixonado por tecnologia. Tenho experiência em React,
+                Typescript, Node.js, MySQL, SQL Server e Git.
+              </p>
+            </div>
+          )}
         </div>
       </div>
-
-      {showInfo && (
-        <div className='info' style={{ opacity: showInfo ? 1 : 0 }}>
-          <h2>Sobre Gabriel Ventura</h2>
-          <p>
-            Olá, eu sou o Gabriel Ventura, um Desenvolvedor Full Stack
-            apaixonado por tecnologia. Tenho experiência em React, Typescript,
-            Node.js, MySQL, SQL Server e Git.
-          </p>
-        </div>
-      )}
 
       <footer> slycoder &copy; 2024</footer>
     </main>
