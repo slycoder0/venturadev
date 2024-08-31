@@ -1,18 +1,23 @@
+/* Estilos gerais */
 .content {
   width: 100%;
   max-width: 600px;
   padding: 2rem;
   box-sizing: border-box;
   border-radius: 8px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 }
+
 .foto {
   border-radius: 30%;
   width: 200px;
   transition: transform 0.5s ease;
 }
+
 .foto:hover {
   transform: translateY(10px);
 }
+
 .links {
   display: flex;
   flex-direction: column;
@@ -21,6 +26,7 @@
   gap: 1.125rem;
   margin-block: 3rem;
 }
+
 .links button {
   border: none;
   width: 15rem;
@@ -32,20 +38,23 @@
   cursor: pointer;
   transition: transform 0.8s ease, box-shadow 0.5s ease;
 }
+
 .links button:hover {
   transform: scale(1.1);
 }
 
-.links button a {
+.links a {
   margin-left: 0.4rem;
   text-decoration: none;
   color: white;
   font-weight: bold;
   font-size: 1.125em;
 }
+
 .github {
   background-color: black;
 }
+
 .github:hover {
   box-shadow: 0px 0px 20px #282828;
 }
@@ -53,9 +62,11 @@
 .linkedin {
   background-color: #004182;
 }
+
 .linkedin:hover {
   box-shadow: 0px 0px 20px #004182;
 }
+
 .instagram {
   background: linear-gradient(
     to right,
@@ -67,18 +78,57 @@
     #fd1d1d
   );
 }
+
 .instagram:hover {
   box-shadow: 0px 0px 10px #405ce69a, 0px 0px 12px #5851dba4,
     0px 0px 14px #833ab492, 0px 0px 16px #c135849c, 0px 0px 18px #e1306b87,
     0px 0px 20px #fd1d1d89;
 }
+
 .email {
   background: linear-gradient(to right, brown, darkred, red);
 }
+
 .email:hover {
   box-shadow: 0px 0px 20px darkred, 0px 0px 20px red;
 }
+
+/* Estilos do footer */
 footer {
   margin-top: 2rem;
   text-align: center;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+/* Estilos da div info */
+.info {
+  width: 100%;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeIn 0.5s forwards;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.info h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.info p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Animação para o efeito de aparecimento */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

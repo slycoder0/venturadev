@@ -1,13 +1,21 @@
+import { useState } from 'react';
 import './home.css';
 import { BsInstagram, BsLinkedin, BsGithub } from 'react-icons/bs';
 import { SiGmail } from 'react-icons/si';
 import foto from './foto.jpg';
+
 export default function Home() {
+  const [showInfo, setShowInfo] = useState(false);
+
+  const handleClick = () => {
+    setShowInfo(!showInfo);
+  };
+
   return (
     <main>
       <div className='content'>
         <img src={foto} alt='Foto Gabriel' className='foto' />
-        <h1 className='titulo'>Gabrirel Ventura </h1>
+        <h1 className='titulo'>Gabriel Ventura</h1>
         <p className='descricao'>
           Desenvolvedor Full Stack | React | Typescript | node.js | MySQL | SQL
           Server | Git
@@ -19,15 +27,15 @@ export default function Home() {
               Github
             </a>
           </button>
-          <button className='linkedin'>
-            <BsLinkedin />
-            <a
-              href='https://www.linkedin.com/in/gabriel-ventura-13028b208/'
-              target='_blank'
-            >
+          <a
+            href='https://www.linkedin.com/in/gabriel-ventura-13028b208/'
+            target='_blank'
+          >
+            <button className='linkedin'>
+              <BsLinkedin />
               Linkedin
-            </a>
-          </button>
+            </button>
+          </a>
           <button className='instagram'>
             <BsInstagram />
             <a href='' target='_blank'>
@@ -40,13 +48,23 @@ export default function Home() {
               Email
             </a>
           </button>
-          <button>
-            <a href='' target='_blank'>
-              ?
-            </a>
+          <button onClick={handleClick} className='btnwhois'>
+            Who is?
           </button>
         </div>
       </div>
+
+      {showInfo && (
+        <div className='info' style={{ opacity: showInfo ? 1 : 0 }}>
+          <h2>Sobre Gabriel Ventura</h2>
+          <p>
+            Olá, eu sou o Gabriel Ventura, um Desenvolvedor Full Stack
+            apaixonado por tecnologia. Tenho experiência em React, Typescript,
+            Node.js, MySQL, SQL Server e Git.
+          </p>
+        </div>
+      )}
+
       <footer> slycoder &copy; 2024</footer>
     </main>
   );
