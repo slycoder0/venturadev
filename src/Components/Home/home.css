@@ -57,7 +57,9 @@
   font-weight: bold;
   font-size: 1.125em;
 }
-
+a:visited {
+  color: white;
+}
 .github {
   background-color: black;
 }
