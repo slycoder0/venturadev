@@ -20,7 +20,7 @@
 }
 
 .foto:hover {
-  transform: translateY(10px);
+  transform: translateY(5px);
 }
 
 .links {
@@ -98,36 +98,4 @@
 
 .email:hover {
   box-shadow: 0px 0px 20px darkred, 0px 0px 20px red;
-}
-
-/* Estilos da div info */
-.info {
-  width: 100%;
-  color: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-  opacity: 0;
-  transform: translateY(-10px);
-  animation: fadeIn 0.5s forwards;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-}
-
-.info h2 {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-}
-
-.info p {
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-/* Animação para o efeito de aparecimento */
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }

@@ -1,16 +1,9 @@
-import { useState } from 'react';
 import './home.css';
 import { BsInstagram, BsLinkedin, BsGithub } from 'react-icons/bs';
 import { SiGmail } from 'react-icons/si';
-import foto from './foto.jpg';
+import foto from './foto.png';
 
 export default function Home() {
-  const [showInfo, setShowInfo] = useState(false);
-
-  const handleClick = () => {
-    setShowInfo(!showInfo);
-  };
-
   return (
     <main>
       <div className='content'>
@@ -48,20 +41,6 @@ export default function Home() {
               Email
             </button>
           </a>
-
-          <button onClick={handleClick} className='btnwhois'>
-            Clique Aqui
-          </button>
-          {showInfo && (
-            <div className='info' style={{ opacity: showInfo ? 1 : 0 }}>
-              <h2>Sobre Gabriel Ventura</h2>
-              <p>
-                Olá, eu sou o Gabriel Ventura, um Desenvolvedor Full Stack
-                apaixonado por tecnologia. Tenho experiência em React,
-                Typescript, Node.js, MySQL, SQL Server e Git.
-              </p>
-            </div>
-          )}
         </div>
       </div>
 
