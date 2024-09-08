@@ -42,6 +42,8 @@
   gap: 10px;
   align-items: center;
   cursor: pointer;
+  color: white;
+  font-weight: 550;
   transition: transform 0.8s ease, box-shadow 0.5s ease;
 }
 
@@ -100,4 +102,28 @@ a:visited {
 
 .email:hover {
   box-shadow: 0px 0px 20px darkred, 0px 0px 20px red;
+}
+.portfolio {
+  background: orangered;
+}
+
+.portfolio:hover {
+  box-shadow: 0px 0px 20px darkred, 0px 0px 20px red;
+}
+
+@media (max-width: 425px) {
+  .links button {
+    font-size: 1em;
+  }
+  .foto {
+    width: 20rem;
+  }
+  .titulo {
+    margin-top: 0.625rem;
+  }
+  .descricao {
+    font-size: 1.125em;
+    line-height: 25px;
+    margin-top: 0.625rem;
+  }
 }

@@ -2,6 +2,7 @@ import './home.css';
 import { BsInstagram, BsLinkedin, BsGithub } from 'react-icons/bs';
 import { SiGmail } from 'react-icons/si';
 import foto from './foto.png';
+import Portfolio from '../Portfolio/Portfolio';
 
 export default function Home() {
   return (
@@ -41,9 +42,12 @@ export default function Home() {
               Email
             </button>
           </a>
+          <a href='' target='_blank'>
+            <button className='portfolio'>Portfolio</button>
+          </a>
         </div>
       </div>
-
+      <Portfolio />
       <footer> slycoder &copy; 2024</footer>
     </main>
   );
